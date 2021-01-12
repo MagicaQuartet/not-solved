@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "not-solved",
+  "version": "1.0",
+  "description": "Hides solved.ac tier icons for unsolved problems",
+  "icons": {
+    "48": "icons/not-solved-logo.svg",
+    "96": "icons/not-solved-logo.svg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.acmicpc.net/*"],
+      "js": ["not_solved.js"]
+    }
+  ]
+}
