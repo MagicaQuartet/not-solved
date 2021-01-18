@@ -6,12 +6,14 @@
   if (problemSet) {
     const tierImgList = problemSet.querySelectorAll('tbody td img.solvedac-tier');
     tierImgList.forEach((elem) => {
-      const successLabel = elem.parentElement.nextSibling.querySelector('span.label-success');
+      const successLabel = elem.parentElement.parentElement.querySelector('span.label-success');
       elem.style.display = successLabel ? '' : 'none';
     });
-  } else {
+  }
+
+  if (problemMenu) {
     const tierImg = problemMenu.querySelector('img.solvedac-tier');
-    const successLabel = problemMenu.querySelector('.page-header span.label-success');
+    const successLabel = problemMenu.parentElement.parentElement.querySelector('span.label-success');
     tierImg.style.display = successLabel ? '' : 'none';
   }
 })();
