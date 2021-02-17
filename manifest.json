@@ -10,7 +10,20 @@
   "content_scripts": [
     {
       "matches": ["*://*.acmicpc.net/*"],
-      "js": ["not_solved.js"]
+      "js": [
+        "common_util.js",
+        "not_solved.js"
+      ]
     }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "default_icon": "icons/not-solved-logo.svg",
+    "default_popup": "popup/index.html"
+  },
+  "web_accessible_resources": [
+    "css/*.css"
   ]
 }
