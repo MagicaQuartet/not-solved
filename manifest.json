@@ -17,13 +17,14 @@
     }
   ],
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "browser_action": {
     "default_icon": "icons/not-solved-logo.svg",
     "default_popup": "popup/index.html"
   },
   "web_accessible_resources": [
-    "css/*.css"
+    "styles/*.css"
   ]
 }

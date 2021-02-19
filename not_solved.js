@@ -7,5 +7,11 @@ function injectCSS() {
   document.getElementsByTagName('head')[0].appendChild(linkTag);
 }
 
-injectCSS()
-hideTierIconForUnsolved();
+browser.runtime.onMessage.addListener((message) => {
+  if (message.command === "toggle") {
+    toggleTierIconForUnsolved();
+  }
+});
+
+injectCSS();
+toggleTierIconForUnsolved();

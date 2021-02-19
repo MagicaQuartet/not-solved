@@ -8,6 +8,19 @@ const regexCategory = /^\/category(\/[A-Za-z0-9]+)*/
 
 const pathname = location.pathname;
 
+function toggleTierIconForUnsolved() {
+  browser.storage.local.get({
+    hide: true,
+  })
+    .then((result) => {
+      if (result.hide) {
+        hideTierIconForUnsolved();
+      } else {
+        showTierIconForUnsolved();
+      }
+    });
+}
+
 function hideTierIconForUnsolved() {
   if (regexProblemset.test(pathname) || regexWorkbook.test(pathname) || regexCategory.test(pathname)) {
     const tierImgList = document.querySelectorAll('img.solvedac-tier');
