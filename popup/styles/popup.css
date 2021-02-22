@@ -1,8 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+KR:wght@500&display=swap");
+
+.wrapper {
+  padding: 5px;
+  font-size: 12px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.title,
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.title-logo {
+  max-width: 54px;
+  margin-right: 10px;
+}
+
+.title-text {
+  font-size: 18px;
+  font-family: "Fredoka One", cursive;
+}
+
+.row {
+  margin: 5px 0;
+}
+
+.switch-label {
+  width: 120px;
+  margin-right: 5px;
+}
+
+/**
+ * switch
+ */
+
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 34px;
+  height: 21px;
 }
 
 .switch input {
@@ -26,31 +63,31 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 3px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #17ce3a;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #17ce3a;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
 }
 
 .slider.round {
-  border-radius: 34px;
+  border-radius: 21px;
 }
 
 .slider.round:before {
